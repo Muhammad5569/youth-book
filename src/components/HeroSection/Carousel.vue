@@ -45,8 +45,18 @@
             <div class="flex flex-col items-center w-[577px] h-[180px]">
                 <h1 class="text-[25px] py-[25px]">Yoshlar daftariga kirish uchun ariza yuboring</h1>
                 <div class="flex items-center gap-[20px]">
-                    <button class="bg-[#0a58ca] text-white rounded-[5px] py-[6px] px-[10px]">Ariza yuborish</button>
-                    <button class="bg-white rounded-[5px] py-[6px] px-[10px]">Ariza holatini tekshirish</button>
+                    <button 
+                        class="bg-[#0a58ca] text-white rounded-[5px] py-[6px] px-[10px]"
+                        @click="goToApplication" 
+                    >
+                        Ariza yuborish
+                    </button>
+                    <button 
+                        class="bg-white rounded-[5px] py-[6px] px-[10px]"
+                        @click="goToBookStatus"
+                    >
+                        Ariza holatini tekshirish
+                    </button>
                 </div>
             </div>
         </div>
@@ -56,7 +66,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
-
+import { useRouter } from 'vue-router';
 /**
  * Props
  * - images: array of image urls (defaults to 4 placeholders)
@@ -77,7 +87,7 @@ const props = defineProps({
     autoplay: { type: Boolean, default: false },
     autoplayInterval: { type: Number, default: 4000 }
 })
-
+const router = useRouter()
 const imagesToShow = props.images
 const currentIndex = ref(0)
 const root = ref(null)
@@ -131,6 +141,14 @@ const onTouchEnd = () => {
     }
     touchDeltaX = 0
     startAutoplay()
+}
+
+const goToApplication = () => {
+    router.push('/application')
+}
+
+const goToBookStatus = () => {
+    router.push('/tekshirish')
 }
 
 /* Keyboard focus: automatically focus container to listen to arrow keys if user tabs into it */
