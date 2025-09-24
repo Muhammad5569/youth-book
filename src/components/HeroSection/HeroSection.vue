@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import Carousel from './Carousel.vue';
 import { useRouter } from 'vue-router';
+import LoginWindow from './LoginWindow.vue';
+import { ref } from 'vue';
 const router = useRouter()
 const images = [
     'src/assets/04-min.d9bb1553.jpg',
@@ -12,7 +14,7 @@ const images = [
 const goToBookStatus = () => {
     router.push('/tekshirish')
 }
-
+const showLogin = ref(false)
 </script>
 
 <template>
@@ -27,10 +29,11 @@ const goToBookStatus = () => {
                     @click="goToBookStatus" 
                     class="flex justify-center items-center border-black border-1 py-[7px] px-[10px] rounded-sm hover:bg-[#6c757d] hover:text-white">Daftar Holatini tekshirish</button>
                 <button 
-                    @onClick=""
+                    @click="showLogin = true" 
                     class="flex justify-center items-center py-[7px] px-[10px] rounded-sm text-white bg-[#0a58ca] hover:bg-[#0083fc]">Kirish</button>
             </div>
         </div>
+         <LoginWindow v-if="showLogin" :show="showLogin" @close="showLogin = false" />
         <Carousel  :images="images" :autoplay="true" :autoplay-interval="3000" />
     </div>
 </template>
