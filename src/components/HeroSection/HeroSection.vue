@@ -11,8 +11,8 @@ const images = [
     'src/assets/06-min.e6ac3b45.jpg'
 ]
 
-const goToBookStatus = () => {
-    router.push('/tekshirish')
+const login = () => {
+    router.push('/login')
 }
 const showLogin = ref(false)
 </script>
@@ -25,9 +25,6 @@ const showLogin = ref(false)
                 <p class="text-[#000] text-[14px] font-[500] opacity-[0.5]">ELEKTRON PLATFORMASI</p>
             </div>
             <div class="flex justify-between items-center gap-[140px]">
-                <button
-                    @click="goToBookStatus" 
-                    class="flex justify-center items-center border-black border-1 py-[7px] px-[10px] rounded-sm hover:bg-[#6c757d] hover:text-white">Daftar Holatini tekshirish</button>
                 <button 
                     @click="showLogin = true" 
                     class="flex justify-center items-center py-[7px] px-[10px] rounded-sm text-white bg-[#0a58ca] hover:bg-[#0083fc]">Kirish</button>
