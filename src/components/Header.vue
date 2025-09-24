@@ -7,7 +7,9 @@ import LanguageToggle from './LanguageToggle.vue';
   <div class="py-[15px]">
     <div class="max-w-[1440px] mx-auto flex justify-between items-center py-">
       <div class="py-[6px]">
-        <img src="../assets/logo.png" alt="logo" class="w-full h-[52px]">
+        <a href="/">
+          <img src="../assets/logo.png" alt="logo" class="w-full h-[52px]"></img>
+        </a>
       </div>
       <div class="flex items-center py-[10px] gap-4">
         <LanguageToggle />

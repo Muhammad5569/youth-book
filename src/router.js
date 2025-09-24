@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import HeroSection from './components/HeroSection/HeroSection.vue'
 import BookStatus from './components/BookStatus/BookStatus.vue'
 import ApplicationStatus from './components/ApplicationStatus/ApplicationStatus.vue'
+import Admin from './components/Admin /Admin.vue'
 
 const routes = [
     {
@@ -15,6 +16,10 @@ const routes = [
     {
         path:"/application-check-youth",
         component: ApplicationStatus
+    },
+    {
+        path:"/admin-page",
+        component:Admin
     }
 ]
 
