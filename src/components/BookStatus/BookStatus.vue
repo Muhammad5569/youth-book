@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import Footer from '../Footer.vue'
+import Header from '../Header.vue'
 
 // variables for inputs
 const docType = ref('')
@@ -16,6 +18,7 @@ const handleCheck = () => {
 </script>
 
 <template>
+    <Header/>
     <div class="max-w-[1280px] mx-auto p-[20px]  my-[100px] [box-shadow:0_0_20px_rgba(0,0,0,0.2)]">
         <h1 class="text-[32px] text-[#00264d] mb-[30px] mt-[10px] font-semibold text-center">
             Ariza holatini tekshirish
@@ -54,6 +57,6 @@ const handleCheck = () => {
         </div>
     </div>
 
-    <hr class="h-px bg-blue-500 border-0" />
-
+    
+    <Footer />
 </template>

@@ -3,6 +3,8 @@ import Carousel from './Carousel.vue';
 import { useRouter } from 'vue-router';
 import LoginWindow from './LoginWindow.vue';
 import { ref } from 'vue';
+import Header from '../Header.vue'
+import Footer from '../Footer.vue';
 const router = useRouter()
 const images = [
     'src/assets/04-min.d9bb1553.jpg',
@@ -18,6 +20,7 @@ const showLogin = ref(false)
 </script>
 
 <template>
+    <Header />
     <div class="max-w-[1440px] mx-auto mb-12">
         <div class="flex justify-between items-center mb-8">
             <div class="">
@@ -33,4 +36,5 @@ const showLogin = ref(false)
          <LoginWindow v-if="showLogin" :show="showLogin" @close="showLogin = false" />
         <Carousel  :images="images" :autoplay="true" :autoplay-interval="3000" />
     </div>
+    <Footer />
 </template>
