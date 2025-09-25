@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HeroSection from './components/HeroSection/HeroSection.vue'
 import BookStatus from './components/BookStatus/BookStatus.vue'
 import ApplicationStatus from './components/ApplicationStatus/ApplicationStatus.vue'
-import Admin from './components/Admin /Admin.vue'
+import Admin from './components/Admin/Admin.vue'
 import DashboardLayout from './layouts/DashboardLayout.vue'
 import ApplicationSend from './components/ApplictionSend/ApplicationSend.vue'
 const routes = [
