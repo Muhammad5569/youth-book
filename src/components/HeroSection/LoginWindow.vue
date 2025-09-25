@@ -36,13 +36,13 @@ const handleLogin = () => {
   // ✅ redirect based on role
   switch (role) {
     case "user":
-      router.push("/user-dashboard")
+      router.push("/user")
       break
     case "city":
-      router.push("/city-dashboard")
+      router.push("/city")
       break
     case "region":
-      router.push("/region-dashboard")
+      router.push("/region")
       break
     case "admin":
       router.push("/admin")
