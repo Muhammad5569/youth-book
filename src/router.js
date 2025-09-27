@@ -1,31 +1,42 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HeroSection from './components/HeroSection/HeroSection.vue'
 import BookStatus from './components/BookStatus/BookStatus.vue'
-import ApplicationStatus from './components/ApplicationStatus/ApplicationStatus.vue'
 import Admin from './components/Admin/Admin.vue'
 import DashboardLayout from './layouts/DashboardLayout.vue'
 import ApplicationSend from './components/ApplictionSend/ApplicationSend.vue'
+import MainLayout from './layouts/MainLayout.vue'
+import Status from './pages/Application/Status.vue'
+import Submit from './pages/Application/Submit.vue'
 const routes = [
     {
         path: '/',
-        component: HeroSection
+        component: MainLayout,
+        children: [
+            {
+                path: '',
+                component: HeroSection
+            },
+            {
+                path: "/tekshirish",
+                component: BookStatus
+            },
+            {
+                path: "/application-check-youth",
+                component: Status
+            },
+            {
+                path: "/application",
+                component: Submit
+            },
+            
+        ]
     },
-    {
-        path: "/tekshirish",
-        component: BookStatus
-    },
-    {
-        path: "/application-check-youth",
-        component: ApplicationStatus
-    },
+
     {
         path: "/admin-page",
         component: Admin
     },
-    {
-        path: "/application",
-        component: ApplicationSend
-    },
+
     {
         path: "/admin",
         component: DashboardLayout,

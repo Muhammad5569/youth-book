@@ -1,49 +1,38 @@
 <template>
-    <Header />
-    <div class="max-w-5xl mx-auto p-6 bg-white shadow rounded">
+    <div class="max-w-5xl mt-12 mx-auto p-6 bg-white shadow rounded">
         <h2 class="text-xl font-bold mb-6">Ariza Yaratish</h2>
 
         <form @submit.prevent="handleSubmit" class="grid grid-cols-2 gap-6">
-            <!-- PIN -->
+            
             <div class="flex items-center space-x-3">
                 <label class="w-32 text-sm font-medium">PIN</label>
                 <input v-model="form.pin" type="text" class="flex-1 border p-2 rounded" placeholder="PIN kiriting" />
             </div>
-
-            <!-- Passport -->
             <div class="flex items-center space-x-3">
                 <label class="w-32 text-sm font-medium">Passport</label>
                 <input v-model="form.passport" type="text" class="flex-1 border p-2 rounded"
                     placeholder="Passport raqami" />
             </div>
-
-            <!-- Birth date -->
             <div class="flex items-center space-x-3">
                 <label class="w-32 text-sm font-medium">Tug‘ilgan sana</label>
                 <input v-model="form.birth_date" type="date" class="flex-1 border p-2 rounded" />
             </div>
-
-            <!-- University -->
             <div class="flex items-center space-x-3">
                 <label class="w-32 text-sm font-medium">Universitet</label>
                 <input v-model="form.university" type="text" class="flex-1 border p-2 rounded"
                     placeholder="Universitet nomi" />
             </div>
-
-            <!-- Field -->
             <div class="flex items-center space-x-3">
                 <label class="w-32 text-sm font-medium">Yo‘nalish</label>
                 <input v-model="form.field" type="text" class="flex-1 border p-2 rounded" placeholder="Yo‘nalish" />
             </div>
 
-            <!-- Description (full width) -->
             <div class="flex items-center col-span-2 space-x-3">
                 <label class="w-32 text-sm font-medium">Izoh</label>
                 <textarea v-model="form.description" class="flex-1 border p-2 rounded"
                     placeholder="Izoh yozing"></textarea>
             </div>
 
-            <!-- Button (full width center) -->
             <div class="col-span-2 flex justify-center">
                 <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700">
                     Yaratish
@@ -51,7 +40,6 @@
             </div>
         </form>
     </div>
-    <Footer />
 </template>
 
 <script setup>
