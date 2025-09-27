@@ -7,10 +7,10 @@ import Header from '../Header.vue'
 import Footer from '../Footer.vue';
 const router = useRouter()
 const images = [
-    'src/assets/04-min.d9bb1553.jpg',
-    'src/assets/05-min.d0259791.jpg',
-    'src/assets/06-min.e6ac3b44.jpg',
-    'src/assets/06-min.e6ac3b45.jpg'
+    '/images/04-min.d9bb1553.jpg',
+    '/images/05-min.d9bb1553.jpg',
+    '/images/06-min.e6ac3b44.jpg',
+    '/images/06-min.e6ac3b45.jpg'
 ]
 
 const login = () => {
@@ -32,7 +32,7 @@ const showLogin = ref(false)
                     class="flex justify-center items-center py-[7px] px-[10px] rounded-sm text-white bg-[#0a58ca] hover:bg-[#0083fc]">Kirish</button>
             </div>
         </div>
-         <LoginWindow v-if="showLogin" :show="showLogin" @close="showLogin = false" />
+        <LoginWindow v-if="showLogin" :show="showLogin" @close="showLogin = false" />
         <Carousel  :images="images" :autoplay="true" :autoplay-interval="3000" />
     </div>
 </template>
