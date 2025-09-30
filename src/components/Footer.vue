@@ -6,11 +6,6 @@
             </a>
             <h1 class="text-[20px]">Platforma Yoshlar ishlari agentligi tomonidan ishlab chiqilgan.</h1>
         </div>
-        <a href="#">
-            <img class="absolute right-0"
-                src="https://cnt0.www.uz/counter/collect?id=46100&r=&pg=https%3A//yoshlardaftari.uz/&c=Y&j=N&wh=1920x1080&px=24&js=1.3&col=340F6E&t=ffffff&p=BD6F6F"
-                alt="pic">
-        </a>
     </div>
     <hr class="border-t border-blue-500" />
     <div class="max-w-[1440px] mx-auto py-6">

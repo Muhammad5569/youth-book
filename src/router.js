@@ -31,7 +31,10 @@ const routes = [
             
         ]
     },
-
+    {
+        path: "/login",
+        component: () => import("./pages/Login/Login.vue")
+    },
     {
         path: "/admin-page",
         component: Admin

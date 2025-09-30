@@ -6,8 +6,8 @@ import Footer from "../components/Footer.vue"
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header><Header/></el-header>
-      <el-main><RouterView/></el-main>
+      <Header/>
+      <el-main class="mt-[96px]"><RouterView/></el-main>
       <el-footer><Footer/></el-footer>
     </el-container>
   </div>
