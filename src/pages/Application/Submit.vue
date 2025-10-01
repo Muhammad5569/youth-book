@@ -1,38 +1,51 @@
 <template>
-    <el-card>
-        < <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" :rules="rules" label-width="auto"
-            class="mt-12 mx-auto">
-            <el-form-item label="PIN" prop="name">
-                <el-input v-model="ruleForm.name" />
-            </el-form-item>
-            <el-form-item label="Passport" prop="passport">
-                <el-input v-model="ruleForm.passport" />
-            </el-form-item>
-            <el-form-item label="Birth Date" required>
-                <el-col :span="11">
-                    <el-form-item prop="birthDate">
-                        <el-date-picker v-model="ruleForm.birthDate" type="date" aria-label="Pick a date"
-                            placeholder="Pick a date" :teleported="false" style="width: 100%" />
+    <el-card class="mt-12 mx-auto mx-[50px]">
+        <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="auto" class="mt-12 mx-auto">
+            <el-row>
+                <el-col :xs="24" :md="12">
+                    <el-form-item label="PIN" prop="name">
+                        <el-input v-model="ruleForm.name" />
                     </el-form-item>
                 </el-col>
-            </el-form-item>
-            <el-form-item label="University" props="university" required>
-                <el-input v-model="ruleForm.university" />
-            </el-form-item>
-            <el-form-item label="Field" props="field" required>
-                <el-input v-model="ruleForm.field" />
-            </el-form-item>
-            <el-form-item label="Activity form" prop="desc">
-                <el-input v-model="ruleForm.desc" type="textarea" />
-            </el-form-item>
+                <el-col :xs="24" :md="12">
+                    <el-form-item label="Passport" prop="passport">
+                        <el-input v-model="ruleForm.passport" />
+                    </el-form-item>
+                </el-col>
+                <el-col :xs="24" :md="12">q
+                    <el-form-item label="Birth Date" required>
+                        <el-date-picker v-model="ruleForm.birthDate" type="date" aria-label="Pick a date"
+                            placeholder="Pick a date" :teleported="false" style="width: 100%" />
+                    </el-form-item> 
+                </el-col>
 
-            <el-form-item>
-                <el-button type="primary" @click="submitForm(ruleFormRef)">
-                    Create
-                </el-button>
-                <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
-            </el-form-item>
-            </el-form>
+                <el-col :xs="24" :md="12"> 
+                    <el-form-item label="University" props="university" required>
+                        <el-input v-model="ruleForm.university" />
+                    </el-form-item> 
+                </el-col>
+                <el-col :xs="24" :md="12"> 
+                    <el-form-item label="Field" props="field" required>
+                        <el-input v-model="ruleForm.field" />
+                    </el-form-item> 
+                </el-col>
+                <el-col :xs="24" :md="12">
+                    <el-form-item label="Activity form" prop="desc">
+                        <el-input v-model="ruleForm.desc" type="textarea" />
+                    </el-form-item> 
+                </el-col>
+
+                <el-col :xs="24" md="12">
+                <el-form-item>
+                    <el-button type="primary" @click="submitForm(ruleFormRef)">
+                        Create
+                    </el-button>
+                    <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
+                </el-form-item> 
+            </el-col>
+            </el-row>
+        </el-form>
+
     </el-card>
 </template>
 
